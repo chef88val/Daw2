@@ -15,11 +15,13 @@ require_once("menu/array.php");
 	</head>
 	
 	<body>	 
+        <!--Comienza la barra de navegacion-->
 		<nav class="navbar navbar-inverse">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
 		      <a class="navbar-brand" href="#"><?=$menu["titulo"][$idioma]?></a>
 		    </div>
+              <!--Comienza el menu-->
 		    <div>
 		       <ul class="nav navbar-nav">
 		        <?php
@@ -37,7 +39,7 @@ require_once("menu/array.php");
 		            )
 		        );*/
 		
-		
+		//Aquí comienza el recorrido de la array
 		        foreach ($menu as $valores => $value) {
 		          foreach ($value as $key =>$valor ) {
 		           echo"<li class=''> ";
@@ -51,7 +53,7 @@ require_once("menu/array.php");
 		              }else if ($valores == "titulo"){
 		              	echo "";
 		              }else echo "<a href=''>$valor</a>";
-		
+		//A partir de aquí busca los elementos padre que tienen hijos
 		            }elseif ($key == "submenu" && $valores == "tipos de juego") {
 		               echo"<li>";
 		                foreach ($menu as $valores => $value) {
@@ -76,13 +78,15 @@ require_once("menu/array.php");
 		        }
 		        ?>
 		      </ul>
+                <!--Finaliza el menu-->
 		    </div>
 		  </div>
 		</nav>
-		
+		<!--Finaliza la barra de navegacion-->
 		<div>
 			<div id="superior">
-			<?php for ($i = 1; $i<=6;$i++) { 
+			<?php //Bucle for para recorrer todas las imagenes que se van a añadir despues
+                for ($i = 1; $i<=6;$i++) { 
 			echo "<div class='col-md-2'>";
 			echo "<img alt='n$i'  src='./img/n$i.jpeg'>";
 			echo "</div>";
@@ -92,7 +96,8 @@ require_once("menu/array.php");
 			<br>
 			<div id="inferior">
 				<div class='col-md-2'>Dado aleatorio</div>				
-				<?php function dado(){ $ale=mt_rand(1,6); return $ale;} ?>
+				<?php //Funcion que devuelve el numero aleatorio para dos lineas mas abajo añadir el valor devuelto y que se corresponda con el fichero de la carpeta
+                    function dado(){ $ale=mt_rand(1,6); return $ale;} ?>
 				<!-- //echo "<img alt='n$i'  src='./img/n$ale.jpeg'>";  -->
 				<div class='col-md-2'><img alt="n<?=dado(); ?>"  src="./img/n<?=dado(); ?>.jpeg"></div>
 				
