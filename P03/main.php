@@ -84,14 +84,14 @@ include 'functions.php';
 		  </div>
 		</nav>
 		<!--Finaliza la barra de navegacion-->
-		<div>			
+		<!-- Comienza el contenido de la página -->
+		<div>		
 			<br>
-			<div class="col-md-2">
-			
-				<span>Dado 1</span> <br>				
-				<?php $d1=dado();$d2=dado();?>
-				<!-- //echo "<img alt='n$i'  src='./img/n$ale.jpeg'>";  -->
-				<img alt="n<?=$d1; ?>"  src="./img/n<?=$d1; ?>.jpeg">
+			<div class="col-md-2"><!-- Columna de la izquierda -->			
+				<span>Dado 1</span><br>				
+				<?php /*Llamada de la funcion dado y almacenado en una variable*/$d1=dado();$d2=dado();?>
+				<img alt="n<?=$d1; ?>"  src="./img/n<?=$d1; ?>.jpeg"><!-- En esta linea, se ha utilizado la variable que 
+																	almacenaba el valor devuelto de la funcion dado -->
 			</div>				
 			
 			
@@ -101,9 +101,11 @@ include 'functions.php';
 			</div>				
 		
 			
-			<div class="col-md-4" >
-				<form action="action.php" method="post">
+			<div class="col-md-4" ><!-- Columna de la derecha -->
+				<form action="action.php" method="post"><!-- Abrimos formulario para recoger y enviar valores a action.php -->
 				<input type="text" name="d1" value="<?=$d1?>" hidden><input type="text" name="d2" value="<?=$d2?>" hidden>
+				<!-- ^^^La linea crea un campo oculto para el usuario en el que se va a almacenar la 
+				variable devuelta por la funcion dado, de este modo la funcion de comparar valores podrá usar ese valor-->
 					<label>Introduce el valor de dado 1</label><br><input type="text" name="nD1">
 					<br><br>
 					<input type="radio" name="group1" value="plus" checked>+
@@ -112,7 +114,7 @@ include 'functions.php';
 					<label>Introduce el valor de dado 2</label><br><input type="text" name="nD2">
 					<br><br>
 					<input type="submit" value="Calcular">
-				</form>
+				</form><!-- Fin del formulario -->
 			</div>
 		</div>
 	</body>
