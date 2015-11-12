@@ -109,7 +109,9 @@ include 'functions.php';
 					<label>Introduce el valor de dado 1</label><br><input type="text" name="nD1">
 					<br><br>
 					<input type="radio" name="group1" value="plus" checked>+
-					<input type="radio" name="group1" value="less">-<br>
+					<input type="radio" name="group1" value="less">-
+					<input type="radio" name="group1" value="mult">*
+					<input type="radio" name="group1" value="div">/<br>
 					<br><br>
 					<label>Introduce el valor de dado 2</label><br><input type="text" name="nD2">
 					<br><br>

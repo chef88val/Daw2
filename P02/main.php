@@ -97,7 +97,7 @@ require_once("menu/array.php");
 			<div id="inferior">
 				<div class='col-md-2'>Dado aleatorio</div>				
 				<?php //Funcion que devuelve el numero aleatorio para dos lineas mas abajo añadir el valor devuelto y que se corresponda con el fichero de la carpeta
-                    function dado(){ $ale=mt_rand(1,6); return $ale;} ?>
+                    function dado($lados){ $ale=mt_rand(1,$lados); return $ale;} ?>
 				<!-- //echo "<img alt='n$i'  src='./img/n$ale.jpeg'>";  -->
 				<div class='col-md-2'><img alt="n<?=dado(); ?>"  src="./img/n<?=dado(); ?>.jpeg"></div>
 				
