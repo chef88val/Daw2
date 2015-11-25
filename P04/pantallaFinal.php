@@ -1,8 +1,6 @@
 
 <?php session_start(); include "header.php"; ?>
-	<div style="border: 1px solid black;margin: 1px;padding: 5px;margin-bottom: 20px;" class="userData ">Bienvenido <a><?=$_SESSION['name_user']?></a>
- 	<span style="float: right;">Tienes <?php echo $_SESSION["puntos"]; ?> puntos</span></div>
-
+	
 	<div class="row" style="margin-left: 30%;">
 		<div class="col-md-6">
 			<?php 
