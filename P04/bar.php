@@ -12,7 +12,6 @@
 		    <div>
 		       <ul class="nav navbar-nav">
 		        <?php
-		       
 		//Aquí comienza el recorrido de la array
 		        foreach ($menu as $valores => $value) {
 		          foreach ($value as $key =>$valor ) {
@@ -34,8 +33,10 @@
 		                  foreach ($value as $key => $valor ) {
 		                    foreach ($valor as $hijo => $value2) {
 		                      foreach ($value2 as $key2 => $valor2) {
-		                        if ($key2 == $idioma) {
-		                           echo"<a href=''>$valor2</a>";
+		                        if ($key2 == $idioma) {	
+		                        	       $dropdownurl=$menu[$valores][$key][$hijo][url];
+
+		                           echo"<a href=".$menu[$valores][$key][$hijo][url].">$valor2</a>";
 		                        }  
 		                      }
 		                    }

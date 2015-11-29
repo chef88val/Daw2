@@ -1,6 +1,6 @@
 <?php 
 //definimos variables del formulario de registro
-$nombreError = $apellidosErr = $emailErr = $edadErr = "";
+$error= "";
 $nombre = $apellidos = $email = $edad = "";
 include_once 'classJugador.php';
 
@@ -9,40 +9,40 @@ session_start();
 
 //Proceso para comprobar que los campos no esten vacios
    if (empty($_POST["UserName"])) {
-     $nombreError = "Nombre se requiere";
+     $error = "Nombre ";
    } else {
    $nombre=$_POST["UserName"];
 
    }
    
    if (empty($_POST["UserEmail"])) {
-     $emailErr = "Email se requiere";
+     $error = "Email ";
    } else {
    $email=$_POST["UserEmail"];
      
    }
 
    if (empty($_POST["UserAge"])) {
-     $edadErr = "Edad se requiere";
+     $error = "Edad ";
    } else {
    $edad=$_POST["UserAge"];
    }
 
     
    if (empty($_POST["UserApe"])) {
-     $apellidosErr = "Appellidos se requiere";
+     $error = "Apellidos ";
    } else {
    $apellidos=$_POST["UserApe"];
    }
    //Comprobamos que esten vacios
    $puntos=$_POST["UserPoints"];
 if (isset($_POST['Submit'])){
-  if((empty($_POST["UserName"]) || empty($_POST["UserEmail"]) || empty($_POST["UserAge"]) 
-    || empty($_POST["UserApe"]) ))
+  if(empty($_POST["UserName"]) || empty($_POST["UserApe"])|| empty($_POST["UserEmail"]) || empty($_POST["UserAge"]) 
+     )
  {
-    echo "<script type='text/javascript'>var r = confirm('Faltan campos');
+    echo "<script type='text/javascript'>var r = confirm('Falta $error');
             if (r == true) {
-                window.location.href = './index.php'; 
+                window.location.href = 'index.php'; 
               }
           </script>";
 
@@ -51,7 +51,7 @@ $_SESSION['jugador'] =new Jugador($nombre,$apellidos,$email,$edad,$puntos);
 
     //Si todos estan completados nos llevará a juego.php
   
-      header( "Location: ./juego.php" );
+      header( "Location: juego.php" );
     
     }
   }

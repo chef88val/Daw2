@@ -21,11 +21,17 @@
 
 					}else if ($expr{$i}  == "-") {
 						$res=$res-$expr{$i+1};
+					} else if ($expr{$i}  == "*") {
+						$res=$res*$expr{$i+1};
+					} else if ($expr{$i}  == "/") {
+						$res=$res/$expr{$i+1};
 					} 
 				} 
 			}
+			$typegame= $_GET['type'];
+
 			//Devolvemos el resultado y la comparacion
-		header( "Location: ./pantallaFinal.php?resultado=$res&valor=$valor");
+		header( "Location: ./pantallaFinal.php?type=$typegame&resultado=$res&valor=$valor");
 	} else
 		{ 
 			//Si no se presiona nos lleva a main.php

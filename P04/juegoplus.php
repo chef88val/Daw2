@@ -15,8 +15,7 @@ if(empty($jugador)){
 	include('initial.php');
 }else{
 	//Si no está vacia jugamos
-?>
-<nav>	
+?><nav>	
 <ul class="nav nav-pills">
   <li role="presentation" class="active"><a href="#">Bienvenido <?= $jugador->getNombre()." ". $jugador->getApellidos() ." tienes "?>
 		<?php 
@@ -73,7 +72,9 @@ if(empty($jugador)){
 					<div class="col-md-6">				
 							<div class="col-md-3"><div class="dado cuatro D"   value="+">+</div></div>	
 							<div class="col-md-3"><div class="dado cuatro D"   value="-">-</div></div>	
-					</div>				
+							<div class="col-md-3"><div class="dado cuatro D"   value="*">*</div></div>	
+							<div class="col-md-3"><div class="dado cuatro D"   value="/">/</div></div>	
+					</div>			
 				</div>		
 				</div>
 			
@@ -83,9 +84,9 @@ if(empty($jugador)){
 		include 'pantallaFinal.php'; 
 	} else { ?>
 		<div class="col-md-6" ><!-- Columna de la derecha -->
-			<form method="post" action="action.php?type=normal"><!-- TODO valores hidden -->
+			<form method="post" action="action.php?type=plus"><!-- TODO valores hidden -->
 				<div class="row" id="divResultado"></div>
-				<input type="submit" name="Calcular"class="btn btn-info buttonJugar"  value="Estas seguro?"  onclick="">
+				<input type="submit" name="Calcular" value="Estas seguro?" class="btn btn-info buttonJugar"  onclick="">
 				<input type="text" id="expResultado" name="expResultado" value="" hidden>
 
 				<input type="text" id="expResultado" name="valorFinal" value="<?=$d6; ?>" hidden>

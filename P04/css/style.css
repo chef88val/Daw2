@@ -3,17 +3,18 @@
 .dado.uno{background-color: blue;}
 .dado.dos{background-color: green;}
 .dado.tres{background-color: yellow;color: black;}
-.dado.cuatro{background-color: orange;}
+.dado.cuatro{background-color: orange; margin-bottom: 10px;}
 .col-md-2{margin-left: 5%;}
 .col-md-4,.col-md-3{margin-left: 25%;}
 .col-sm-2{margin-right:2%; }
 
 .panelJugador,.panelIni{
 	float: left;
-	margin-left: 30%;
+	margin-left: 20%;
+
 	position: relative;
-	
-	background-color: #0edf04;padding: 10px;
+	padding: 10px;
+	width: 50%;
 }
 
 .error {color: #FF0000;}
@@ -24,4 +25,5 @@
 .divResultado3 span{font-size: 40pt;color:blue;}
 .divResultado3 #valorerror{font-size: 50pt;color: red;}
 .col-md-6 h1 {text-align: center;}
-
+a.btn.btn-success{ font-size: 20pt;padding: 10px 90px;}
+a.btn.btn-danger:hover{color:#d9534f;}

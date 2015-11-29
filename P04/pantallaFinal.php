@@ -27,14 +27,20 @@
 						?>
 						<div class="dado  divResultado3">
 						<?php echo "Dijiste <span id='valorerror'>".$_GET['resultado']."</span> y era <span>".$_GET['valor']."</span>";?>
-
 						</div>
-			<?php 
-					}
+			<?php }
 				} ?>
 
 
-			<h1><a href="./juego.php?contador=$contador">Volver a empezar!</a></h1>
+			<h1>
+				<?php if ($_GET['type']=="normal") {?>
+						<a class="btn btn-success " href="./juego.php">Volver a empezar!</a></h1>
+
+				<?php }else {?>
+
+						<a href="./juegoplus.php">Volver a empezar!</a></h1>
+				 <?php }?>
+
 		</div>
 	</div>
 

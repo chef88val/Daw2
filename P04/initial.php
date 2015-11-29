@@ -1,23 +1,40 @@
-<?php //INITIAL.php ?>
-		<div class="panelIni">
-			<form method="post" action="perfil.php">
-				<label> Nombre:</label>
-					<input type="text" size="20" name="UserName">
-					<span class="error">* <?php echo $nombreError;?></span>
-					   <br><br>
-				<label> Apellidos:</label>
-					<input type="text" size="20" name="UserApe">
-					<span class="error">* <?php echo $apellidosErr;?></span>
-					<br><br>
-				<label> Correo:</label>
-					<input type="email" size="20" name="UserEmail">
-					<span class="error">* <?php echo $emailErr;?></span>
-				    <br><br>
-				<label> Edad:</label>
-					<input type="number" size="20" name="UserAge">
-					<span class="error">* <?php echo $edadErr;?></span>
-	  				<br><br>
-
-				<input type="submit" name="Submit" value="Jugamos?">
-			</form>
-		</div>
+<?php //INITIAL.php 
+?>
+<div class="jumbotron">
+	<div class="container">
+		<form class="form-horizontal col-lg-offset-3 "method="post" action="perfil.php">
+  <div class="form-group">
+    <label for="ejemplo_email_3" class="col-lg-2 control-label">Nombre</label>
+    <div class="col-lg-6">
+      <input type="text" class="form-control" name="UserName"id="ejemplo_email_3"
+             placeholder="Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="ejemplo_password_3" class="col-lg-2 control-label">Apellidos</label>
+    <div class="col-lg-6">
+      <input type="text" class="form-control" name="UserApe" id="ejemplo_password_3" 
+             placeholder="Contraseña">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="ejemplo_password_3" class="col-lg-2 control-label">Email</label>
+    <div class="col-lg-6">
+      <input type="email" class="form-control"name="UserEmail"  id="ejemplo_password_3" 
+             placeholder="Contraseña">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="ejemplo_password_3" class="col-lg-2 control-label">Edad</label>
+    <div class="col-lg-6">
+      <input type="number" class="form-control"name="UserAge" id="ejemplo_password_3" 
+             placeholder="Contraseña">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-lg-offset-3 col-lg-10">
+      <button type="submit" name="Submit" class="btn btn-success">Entrar</button>
+    </div>
+  </div>
+</form>
+</div></div>
