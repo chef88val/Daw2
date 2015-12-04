@@ -1,0 +1,32 @@
+
+.dado{width: 140px;height: 140px;background-color: red;text-align: center;line-height: 140px; font-size: 25pt;color: white;}
+.dado.uno{background-color: blue;}
+.dado.dos{background-color: green;}
+.dado.tres{background-color: yellow;color: black;}
+.dado.cuatro{background-color: orange; margin-bottom: 10px;}
+.col-md-2{margin-left: 5%;}
+.col-md-4,.col-md-3{margin-left: 25%;}
+.col-sm-2{margin-right:2%; }
+
+.panelJugador,.panelIni{
+	float: left;
+	margin-left: 20%;
+
+	position: relative;
+	padding: 10px;
+	width: 50%;
+}
+
+.error {color: #FF0000;}
+.userNav a{color:red;}
+#botonRegistrar ,#botonEntrar{width: 100%;}
+.buttonJugar{background-color: red; width: 100%; border:0;margin-top: 10%;}
+.divResultado2{background-color: green; margin-left: 35%;}
+.divResultado3{background-color: black;width: 100%;}
+.divResultado3 span{font-size: 40pt;color:blue;}
+.divResultado3 #valorerror{font-size: 50pt;color: red;}
+.col-md-6 h1 {text-align: center;}
+a.btn.btn-success{ font-size: 20pt;padding: 10px 90px;}
+a.btn.btn-danger:hover{color:#d9534f;}
+.form-horizontal .control-label{text-align: left !important;}
+#panelEntrar{margin: 5% 10% 0 0;}
