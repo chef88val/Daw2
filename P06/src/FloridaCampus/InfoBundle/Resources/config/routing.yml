@@ -1,0 +1,7 @@
+info_homepage:
+    path:     /
+    defaults: { _controller: InfoBundle:Default:index }
+
+hola_user:
+    path:     /hola/{nombre}
+    defaults: { _controller: InfoBundle:Default:hola }
