@@ -1,11 +1,10 @@
 
 <?php 
 	include "header.php";  
-	//require_once 'controller/basedatos.php';
-
+	require_once 'controller/basedatos.php';
 	include_once 'controller/classJugador.php';//Utilizará la clase contructor para almacenar posteriormente los elementos pertenecientes a jugador
 	session_start();//Comienza la sesion
-	$jugador= $_SESSION['jugador'];//Usamos el objeto previamente creado para poder utilizar sus metodos. Le asignamos los valores de sesion
+	$jugador= $_SESSION['jugador'];
 	$bbdd=new BaseDatos();//Creamos un objeto de tipo BaseDatos
 ?>	
 	<div class="row" style="margin-left: 30%;">

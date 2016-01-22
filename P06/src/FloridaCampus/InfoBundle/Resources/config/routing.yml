@@ -5,3 +5,7 @@ info_homepage:
 hola_user:
     path:     /hola/{nombre}
     defaults: { _controller: InfoBundle:Default:hola }
+
+info:
+    path:     /info/
+    defaults: { _controller: InfoBundle:Default:info }
