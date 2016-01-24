@@ -1,9 +1,10 @@
 {#{% extends "InfoBundle:Default:index.html.twig" %}#}
 {% extends "::base.html.twig" %}
+{%block title%}P06{%endblock%}
 {% block body %}
+{%block content%}
 <p>Hola, este es el proyecto 06 de la asignatura de Entornos servidor</p>
-
-<label>Pon tu nombre</label><input type="text" placeholder="Pon tu nombre" id="nombre">
-<a onclick="document.getElementById('link').href+= document.getElementById('nombre').value "id="link" value="Averigua que pasa" href="{{ path('hola_user', {'nombre':(' ') }) }}">Averigua que pasa</a>
-
-{% endblock %}
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+{% endblock %}{% endblock %}

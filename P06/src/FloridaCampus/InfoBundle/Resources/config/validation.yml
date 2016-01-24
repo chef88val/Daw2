@@ -1,0 +1,6 @@
+FloridaCampus\InfoBundle\Entity\Task:
+    properties:
+        task:
+            - NotBlank: ~
+        dueDate:
+            - Type: \DateTime

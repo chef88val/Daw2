@@ -3,8 +3,10 @@
 {%block title%}P06{%endblock%}
 {% block content %}
 <div class="jumbotron">
-	<p>Hola {{nombre}}…bienvenido al curso de symfony</p>
-</div>
+
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}</div>
 
 {% endblock %}
 {% block body %}<div class="jumbotron">

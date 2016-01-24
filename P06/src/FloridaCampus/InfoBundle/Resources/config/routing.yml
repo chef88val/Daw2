@@ -9,3 +9,9 @@ hola_user:
 info:
     path:     /info/
     defaults: { _controller: InfoBundle:Default:info }
+
+nfo:
+    path:     /formulario/
+    defaults: { _controller: InfoBundle:Default:new }
+
+
