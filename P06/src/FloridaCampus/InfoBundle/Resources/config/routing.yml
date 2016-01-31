@@ -1,3 +1,11 @@
+info_alumno:
+    resource: "@InfoBundle/Resources/config/routing/alumno.yml"
+    prefix:   /alumno
+
+info_horario:
+    resource: "@InfoBundle/Resources/config/routing/horario.yml"
+    prefix:   /horario
+
 info_homepage:
     path:     /
     defaults: { _controller: InfoBundle:Default:index }

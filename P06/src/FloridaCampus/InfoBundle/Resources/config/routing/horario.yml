@@ -1,0 +1,24 @@
+horario_index:
+    path:     /
+    defaults: { _controller: "InfoBundle:Horario:index" }
+    methods:  GET
+
+horario_show:
+    path:     /{id}/show
+    defaults: { _controller: "InfoBundle:Horario:show" }
+    methods:  GET
+
+horario_new:
+    path:     /new
+    defaults: { _controller: "InfoBundle:Horario:new" }
+    methods:  [GET, POST]
+
+horario_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "InfoBundle:Horario:edit" }
+    methods:  [GET, POST]
+
+horario_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "InfoBundle:Horario:delete" }
+    methods:  DELETE

@@ -54,7 +54,7 @@ class DefaultController extends Controller
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             return $this->forward('InfoBundle:Default:hola',array('nombre'=>$request->request->get('form')['task']));
-        }
+            }
     
         return $this->render('InfoBundle:Default:new.html.twig', array(
             'form' => $form->createView(),
