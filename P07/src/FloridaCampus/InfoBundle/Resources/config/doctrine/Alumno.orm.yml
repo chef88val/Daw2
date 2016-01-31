@@ -1,0 +1,25 @@
+FloridaCampus\InfoBundle\Entity\Alumno:
+    type: entity
+    table: null
+    repositoryClass: FloridaCampus\InfoBundle\Repository\AlumnoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: 255
+        apellidos:
+            type: string
+            length: 255
+        numTelefono:
+            type: integer
+            unique: true
+            column: num_telefono
+        estudioCursado:
+            type: integer
+            column: estudio_cursado
+    lifecycleCallbacks: {  }

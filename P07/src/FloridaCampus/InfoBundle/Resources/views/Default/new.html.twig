@@ -1,0 +1,14 @@
+{#{% extends "InfoBundle:Default:index.html.twig" %}#}
+{% extends "InfoBundle:Default:index.html.twig" %}
+{%block title%}P06{%endblock%}
+{% block content %}
+<div class="jumbotron">
+
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}</div>
+
+{% endblock %}
+{% block body %}<div class="jumbotron">
+	<p>TE GUSTA…Y LO SABES!</p>
+</div>{% endblock %}

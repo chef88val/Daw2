@@ -1,0 +1,11 @@
+info_alumno:
+    resource: "@InfoBundle/Controller/AlumnoController.php"
+    type:     annotation
+
+info:
+    resource: "@InfoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

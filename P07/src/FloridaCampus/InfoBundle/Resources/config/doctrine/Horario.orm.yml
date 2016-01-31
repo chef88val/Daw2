@@ -1,0 +1,26 @@
+FloridaCampus\InfoBundle\Entity\Horario:
+    type: entity
+    table: null
+    repositoryClass: FloridaCampus\InfoBundle\Repository\HorarioRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        horaSalida:
+            type: datetime
+            column: hora_salida
+        lugarDeSalida:
+            type: string
+            length: 255
+            column: lugar_de_salida
+        horaLlegada:
+            type: datetime
+            column: hora_llegada
+        lugarDeLlegada:
+            type: string
+            length: 255
+            column: lugar_de_llegada
+    lifecycleCallbacks: {  }
